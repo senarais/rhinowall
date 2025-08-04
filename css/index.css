@@ -1,7 +1,9 @@
 :root {
   --main-color: #004868;
   --secondary-color: #F8F9F9;
+  --third-color: #F5A623;
   --text-color: #000;
+  --button-color: #d3d3d3;
 }
 
 
@@ -27,6 +29,7 @@ body {
     align-items: center;
     position: fixed;
     background-color: var(--secondary-color);
+    z-index: 100;
 }
 
 .navbar.scrolled {
@@ -91,6 +94,9 @@ body {
     font-size: 18px;
     line-height: 1.5;
 }
+
+
+
 
 .hero-anchor {
     margin-top: 12px;
@@ -192,4 +198,168 @@ body {
 
 .swiper-wrapper img {
     width: 140px;
+}
+
+.price {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.price-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.price-text h2 {
+    font-size: 40px;
+}
+
+.price-text p {
+    font-size: 15px;
+}
+
+.toggle-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.toggle-price p {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.button {
+    width: 80px;
+    height: 40px;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button.toggleBG {
+    background-color: var(--third-color);
+}
+
+.button-circle {
+    width: 30px;
+    background-color: var(--secondary-color);
+    height: 30px;
+    border-radius: 100%;
+    margin: 5px;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+}
+
+.button-circle.toggle {
+    transform: translateX(40px);
+}
+
+.price-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.price-card {
+    width: 340px;
+    height: max-content;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.price-card-header {
+    margin-bottom: 25px;
+}
+
+.price-card-header h6 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.price-card-header p {
+    font-size: 13px;
+}
+
+.price-card h4 {
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.price-card span {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.price-card-button {
+    background-color: var(--third-color);
+    color: var(--text-color);
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid black;
+}
+
+.price-card-features h6 {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.price-card-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price-card-features-list p {
+    font-size: 13px;
+}
+
+#most-popular-container {
+    position: relative;
+}
+
+#most-popular {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -45px;
+    background-color: var(--third-color);
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+.tier-free .price-card-button {
+    background-color: var(--button-color);
+    cursor: default;
+}
+
+.tier-pro {
+    border: 3px solid var(--third-color);
 }
