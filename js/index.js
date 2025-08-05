@@ -46,11 +46,19 @@ function togglePrice() {
     
 
     if (toggleYear == 0) {
+      const audioOn = new Audio('/assets/audio/price-switch-on.mp3');
+      audioOn.play();
+      audioOn.volume = 0.5;
+      
       document.getElementById('price-free').innerHTML = "$0<span>/year</span>";
       document.getElementById('price-pro').innerHTML = "$99<span>/year</span>";
       document.getElementById('price-business').innerHTML = "$299<span>/year</span>";
       toggleYear = 1;
     } else if (toggleYear == 1) {
+      const audioOff = new Audio('/assets/audio/price-switch-off.mp3');
+      audioOff.play();
+      audioOff.volume = 0.5;
+
       document.getElementById('price-free').innerHTML = "$0<span>/month</span>";
       document.getElementById('price-pro').innerHTML = "$9<span>/month</span>";
       document.getElementById('price-business').innerHTML = "$29<span>/month</span>";
