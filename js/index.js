@@ -16,13 +16,13 @@ window.addEventListener("scroll", function () {
   }
 });
 
-
+// Company slider effect
 function infiniteCarousel () {
   var swiper = new Swiper('.swiper', {
     loop: true,
     speed: 8000,
     autoplay: {
-      delay: 0,         // no delay between slides
+      delay: 0,
       disableOnInteraction: false
     },
     grabCursor: false,
@@ -33,6 +33,8 @@ function infiniteCarousel () {
   });
 } infiniteCarousel();
 
+
+var toggleYear = 0;
 function togglePrice() {
   const button = document.querySelector('.button');
   const circle = document.querySelector('.button-circle');
@@ -40,5 +42,21 @@ function togglePrice() {
   button.addEventListener('click', () => {
     circle.classList.toggle('toggle');
     button.classList.toggle('toggleBG');
+
+    
+
+    if (toggleYear == 0) {
+      document.getElementById('price-free').innerHTML = "$0<span>/year</span>";
+      document.getElementById('price-pro').innerHTML = "$99<span>/year</span>";
+      document.getElementById('price-business').innerHTML = "$299<span>/year</span>";
+      toggleYear = 1;
+    } else if (toggleYear == 1) {
+      document.getElementById('price-free').innerHTML = "$0<span>/month</span>";
+      document.getElementById('price-pro').innerHTML = "$9<span>/month</span>";
+      document.getElementById('price-business').innerHTML = "$29<span>/month</span>";
+      toggleYear = 0;
+    }
+
+
   });
 } togglePrice();

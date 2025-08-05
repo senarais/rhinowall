@@ -239,9 +239,10 @@ body {
 }
 
 .button {
-    width: 80px;
-    height: 40px;
-    background-color: var(--main-color);
+    width: 50px;
+    height: 25px;
+    background-color: var(--secondary-color);
+    border: 1px solid black;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -257,9 +258,9 @@ body {
 }
 
 .button-circle {
-    width: 30px;
-    background-color: var(--secondary-color);
-    height: 30px;
+    width: 15px;
+    background-color: var(--main-color);
+    height: 15px;
     border-radius: 100%;
     margin: 5px;
     transition: transform 0.3s ease;
@@ -267,7 +268,9 @@ body {
 }
 
 .button-circle.toggle {
-    transform: translateX(40px);
+    transform: translateX(25px);
+    border: 1px solid black;
+    background-color: var(--secondary-color);
 }
 
 .price-container {
@@ -281,7 +284,7 @@ body {
 
 .price-card {
     width: 340px;
-    height: max-content;
+    height: 550px;
     padding: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     border-radius: 20px;
@@ -356,8 +359,9 @@ body {
 }
 
 .tier-free .price-card-button {
-    background-color: var(--button-color);
-    cursor: default;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    cursor: pointer;
 }
 
 .tier-pro {
