@@ -1,3 +1,29 @@
+// Toggle SignUp
+function toggleSignup() {
+  const audioOn = new Audio('/assets/audio/price-switch-on.mp3');
+  audioOn.play();
+  audioOn.volume = 0.5;
+  document.querySelector('.signin').classList.remove('hidden');
+}
+
+function removeSignup() {
+  const audioOff = new Audio('/assets/audio/price-switch-off.mp3');
+  audioOff.play();
+  audioOff.volume = 0.5;
+  document.querySelector('.signin').classList.add('hidden');
+}
+const priceButton = document.querySelectorAll('.price-card-button');
+const closeSignup = document.querySelector('.bx-x-circle');
+const signUp = document.querySelector('.signin');
+
+closeSignup.addEventListener('click', removeSignup);
+
+priceButton.forEach((button) => {
+  button.addEventListener('click', toggleSignup);
+});
+
+
+
 // Validate Register Password
 function handleSubmit() {
   const pw = document.getElementById("password").value;

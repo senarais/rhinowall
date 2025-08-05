@@ -13,6 +13,49 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <div class="signin hidden">
+        <a><i class='bx  bx-x-circle'  ></i></a> 
+        <div class="signin-container">
+            <div class="signin-header">
+                <div class="signin-header-title">
+                    <div class="signin-logo">
+                        <img src="assets/RhinoWall-logo.png" alt="RhinoWall Logo">
+                    </div>
+                    <h1>Sign Up</h1>
+                </div>
+
+                <p>Start using RhinoWall for Free!</p>
+            </div>
+
+            <div class="signin-content">
+                <a href=""><div class="signin-oauth">
+                    <div class="google"><img src="assets/google.png" alt="google logo"> Sign in with Google</div>
+                </div></a>
+
+                <div class="line"></div>
+
+                <div class="signin-local">
+                    <form onsubmit="return handleSubmit()">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter your Full Name" required>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Create your Password" required>
+
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <p>Already have an account? <a href="#">Sign in</a></p>
+        </div>
+    </div>
+
     <div class="navbar">
         <img src="assets/RhinoWall AV.png" alt="RhinoWall Logo">
         <div class="navbar-content">
@@ -74,8 +117,7 @@
             <div class="swiper-slide"><img src="assets/company/5.png" alt="company logo"></div>
         </div>
     </div>
-<!-- <i class='bx  bx-check-circle'  ></i> box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  -->
+
     <div class="price">
         <div class="price-text">
             <h2>One Click. Full Protection.</h2>
@@ -119,7 +161,7 @@
                 </div>
 
                 <h4 id="price-pro">$9<span>/month</span></h4>
-                <a href="#" id="free-tier"><div class="price-card-button">Get Pro</div></a>
+                <a><div class="price-card-button">Get Pro</div></a>
 
                 <div class="price-card-features">
                     <h6>Features includes:</h6>
@@ -141,7 +183,7 @@
                 </div>
 
                 <h4 id="price-business">$29<span>/month</span></h4>
-                <a href="#" id="free-tier"><div class="price-card-button">Get Business</div></a>
+                <a><div class="price-card-button">Get Business</div></a>
 
                 <div class="price-card-features">
                     <h6>Features includes:</h6>
