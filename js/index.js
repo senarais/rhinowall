@@ -1,9 +1,24 @@
+// Validate Register Password
+function handleSubmit() {
+  const pw = document.getElementById("password").value;
+  const cpw = document.getElementById("confirm-password").value;
+
+  if (pw !== cpw) {
+    alert("Passwords do not match.");
+    return false; 
+  }
+
+  window.location.href = "index.html";
+
+  return false;
+}
+
+
 //Typed Effect
 var typed = new Typed('#hero-p', {
       strings: ['Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit dolorem quisquam ad, corporis laboriosam voluptate earum delectus rem iure incidunt, sunt tenetur laborum exercitationem qui.'],
       typeSpeed: 0,
       showCursor: false,
-      loop: true,
     });
 
 // NAVBAR SCROLL EFFECT
@@ -64,7 +79,5 @@ function togglePrice() {
       document.getElementById('price-business').innerHTML = "$29<span>/month</span>";
       toggleYear = 0;
     }
-
-
   });
 } togglePrice();

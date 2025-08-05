@@ -45,13 +45,15 @@
 
         .signin-container {
             width: 400px;
-            height: 500px;
+            height: fit-content;
             padding: 30px;
             background-color: var(--secondary-color);
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             border: 1px solid black;
             border-radius: 10px;
+            gap: 25px;
         }
 
         .signin-header p {
@@ -76,6 +78,76 @@
         .signin-header-title h1 {
             display: inline;
         }
+
+        .signin-content {
+            width: 100%;
+        }
+
+        .signin-oauth {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 25px;
+            height: 40px;
+            background-color: var(--button-color);
+            filter: brightness(1.05);
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .signin-oauth:hover {
+            filter: brightness(1.1);
+        }
+
+        .signin-oauth img {
+            width: 20px;
+        }
+
+        .google {
+            display: flex;
+            gap: 10px;
+            color: var(--text-color);
+        }
+
+        .line {
+            width: 100%;
+            background-color: var(--text-color);
+            height: 1px;
+            margin-bottom: 15px;
+        }
+
+        form label {
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        form input {
+            display: block;
+            width: 100%;
+            height: 35px;
+            margin-bottom: 15px;
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        form button {
+            width: 100%;
+            height: 35px;
+            border-radius: 5px;
+            border: 1px solid black;
+            cursor: pointer;
+            margin-top: 20px;
+            background-color: var(--button-color);
+            transition: all 0.3s ease;
+        }
+
+        form button:hover {
+            filter: brightness(1.1);
+        }
+
     </style>
 </head>
 <body>
@@ -87,12 +159,40 @@
                     <div class="signin-logo">
                         <img src="assets/RhinoWall-logo.png" alt="RhinoWall Logo">
                     </div>
-                    <h1>Sign Up</h1>
+                    <h1>Sign In</h1>
                 </div>
 
                 <p>Secure. Simple. Sign in.</p>
             </div>
+
+            <div class="signin-content">
+                <a href=""><div class="signin-oauth">
+                    <div class="google"><img src="assets/google.png" alt="google logo"> Sign in with Google</div>
+                </div></a>
+
+                <div class="line"></div>
+
+                <div class="signin-local">
+                    <form onsubmit="return handleSubmit()">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter your Full Name" required>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Create your Password" required>
+
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
