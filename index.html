@@ -48,11 +48,48 @@
                         <label for="confirm-password">Confirm Password:</label>
                         <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
 
-                        <button type="submit">Submit</button>
+                        <button type="submit">Sign Up</button>
                     </form>
                 </div>
             </div>
-            <p>Already have an account? <a href="#">Sign in</a></p>
+            <p>Already have an account? <a class="changeMethod" onclick="toggleLogin()">Sign in</a></p>
+        </div>
+    </div>
+
+    <div class="login hidden">
+        <a><i class='bx  bx-x-circle'  ></i></a> 
+        <div class="signin-container">
+            <div class="signin-header">
+                <div class="signin-header-title">
+                    <div class="signin-logo">
+                        <img src="assets/RhinoWall-logo.png" alt="RhinoWall Logo">
+                    </div>
+                    <h1>Sign In</h1>
+                </div>
+
+                <p>Start using RhinoWall for Free!</p>
+            </div>
+
+            <div class="signin-content">
+                <a href=""><div class="signin-oauth">
+                    <div class="google"><img src="assets/google.png" alt="google logo"> Sign in with Google</div>
+                </div></a>
+
+                <div class="line"></div>
+
+                <div class="signin-local">
+                    <form onsubmit="window.location.href='index.html'; return false;">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Create your Password" required>
+
+                        <button type="submit">Sign In</button>
+                    </form>
+                </div>
+            </div>
+            <p>Don't have an account? <a class="changeMethod" onclick="toggleSignup()">Sign Up</a></p>
         </div>
     </div>
 
@@ -61,7 +98,7 @@
         <div class="navbar-content">
             <i class="bx bx-sun"></i>
             <a href="#">toggle</a>
-            <a href="#">sign in</a>
+            <a class="signin-button">sign in</a>
             <a id="navbar-download" href="#">Download</a>
         </div>
     </div>
@@ -138,7 +175,7 @@
                 </div>
 
                 <h4 id="price-free">$0<span>/month</span></h4>
-                <a id="free-tier"><div class="price-card-button">Sign Up</div></a>
+                <a id="free-tier"><div class="price-card-button signin-button">Sign Up</div></a>
 
                 <div class="price-card-features">
                     <h6>Features includes:</h6>
@@ -161,7 +198,7 @@
                 </div>
 
                 <h4 id="price-pro">$9<span>/month</span></h4>
-                <a><div class="price-card-button">Get Pro</div></a>
+                <a><div class="price-card-button signin-button">Get Pro</div></a>
 
                 <div class="price-card-features">
                     <h6>Features includes:</h6>
@@ -183,7 +220,7 @@
                 </div>
 
                 <h4 id="price-business">$29<span>/month</span></h4>
-                <a><div class="price-card-button">Get Business</div></a>
+                <a><div class="price-card-button signin-button">Get Business</div></a>
 
                 <div class="price-card-features">
                     <h6>Features includes:</h6>

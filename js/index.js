@@ -3,7 +3,16 @@ function toggleSignup() {
   const audioOn = new Audio('/assets/audio/price-switch-on.mp3');
   audioOn.play();
   audioOn.volume = 0.5;
+  document.querySelector('.login').classList.add('hidden');
   document.querySelector('.signin').classList.remove('hidden');
+}
+
+function toggleLogin() {
+  const audioOn = new Audio('/assets/audio/price-switch-on.mp3');
+  audioOn.play();
+  audioOn.volume = 0.5;
+  document.querySelector('.signin').classList.add('hidden');
+  document.querySelector('.login').classList.remove('hidden');
 }
 
 function removeSignup() {
@@ -11,12 +20,15 @@ function removeSignup() {
   audioOff.play();
   audioOff.volume = 0.5;
   document.querySelector('.signin').classList.add('hidden');
+  document.querySelector('.login').classList.add('hidden');
 }
-const priceButton = document.querySelectorAll('.price-card-button');
-const closeSignup = document.querySelector('.bx-x-circle');
+const priceButton = document.querySelectorAll('.signin-button');
+const closeSignup = document.querySelectorAll('.bx-x-circle');
 const signUp = document.querySelector('.signin');
 
-closeSignup.addEventListener('click', removeSignup);
+closeSignup.forEach(button => {
+  button.addEventListener('click', removeSignup);
+})
 
 priceButton.forEach((button) => {
   button.addEventListener('click', toggleSignup);

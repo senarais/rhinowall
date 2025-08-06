@@ -78,7 +78,7 @@ body {
     cursor: pointer;
 }
 
-.signin {
+.signin, .login {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -213,6 +213,10 @@ form button {
 
 form button:hover {
     filter: brightness(1.1);
+}
+
+.changeMethod, .signin-button {
+    cursor: pointer;
 }
 
 .hidden {

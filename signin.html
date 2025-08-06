@@ -176,7 +176,7 @@
                     <div class="signin-logo">
                         <img src="assets/RhinoWall-logo.png" alt="RhinoWall Logo">
                     </div>
-                    <h1>Sign Up</h1>
+                    <h1>Sign In</h1>
                 </div>
 
                 <p>Start using RhinoWall for Free!</p>
@@ -190,24 +190,18 @@
                 <div class="line"></div>
 
                 <div class="signin-local">
-                    <form onsubmit="return handleSubmit()">
+                    <form onsubmit="window.location.href='index.html'; return false;">
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" placeholder="Enter your Email" required>
-
-                        <label for="fullname">Full Name:</label>
-                        <input type="text" id="fullname" name="fullname" placeholder="Enter your Full Name" required>
 
                         <label for="password">Password:</label>
                         <input type="password" id="password" name="password" placeholder="Create your Password" required>
 
-                        <label for="confirm-password">Confirm Password:</label>
-                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
-
-                        <button type="submit">Submit</button>
+                        <button type="submit">Sign In</button>
                     </form>
                 </div>
             </div>
-            <p>Already have an account? <a href="#">Sign in</a></p>
+            <p>Don't have an account? <a href="#">Sign Up</a></p>
         </div>
     </div>
 
