@@ -354,6 +354,62 @@ form button:hover {
     width: 140px;
 }
 
+.features {
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: fit-content;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    margin-bottom: 160px;
+}
+
+.features-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.features-text h2 {
+    font-size: 45px;
+}
+
+.features-text p {
+    font-size: 15px;
+}
+
+.features-main {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.features-card {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    filter: brightness(0.95);
+    border-bottom: 4px solid var(--third-color);
+    transition: 0.3s ease;
+}
+
+.features-card:hover {
+    transform: scale(1.05);
+}
+
+.features-card h6  {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.features-card p  {
+    font-size: 14px;
+    font-weight: 300;
+}
+
 .price {
     width: 100%;
     height: fit-content;
@@ -362,7 +418,7 @@ form button:hover {
     align-items: center;
     margin: 100px 0;
     flex-direction: column;
-    gap: 60px;
+    gap: 55px;
 }
 
 .price-text {
