@@ -119,3 +119,28 @@ function togglePrice() {
     }
   });
 } togglePrice();
+
+// Feedback Carousel
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    center: true,
+    margin: 20,
+    nav: true,
+    items: 1,
+    stagePadding: 400,
+    responsive:{
+      0:{
+        stagePadding: 150
+      },
+      768:{
+        stagePadding: 300
+      },
+      1200:{
+        stagePadding: 400
+      }
+    },
+    mouseDrag: false,
+    autoplay: true
+  });
+});
