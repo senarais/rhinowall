@@ -615,6 +615,28 @@ form button:hover {
     border: 3px solid var(--third-color);
 }
 
+.feedback {
+    display: flex;
+    margin-top: 150px;
+    flex-direction: column;
+}
+
+.feedback-header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feedback-header-text h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.feedback-header-text p {
+    font-size: 15px;
+    text-align: center;
+}
+
 .owl-carousel {
     margin: 100px 0;
 }
@@ -632,11 +654,16 @@ form button:hover {
     gap: 20px;
     margin: 0 auto;
     transition: transform 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 
 .feedback-card img {
     width: 40px !important;
+}
+
+.feedback-text {
+    text-align: justify;
 }
 
 .feedback-text p {

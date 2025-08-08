@@ -128,7 +128,7 @@ $(document).ready(function(){
     margin: 20,
     nav: true,
     items: 1,
-    stagePadding: 400,
+    stagePadding: 420,
     responsive:{
       0:{
         stagePadding: 150
@@ -137,7 +137,7 @@ $(document).ready(function(){
         stagePadding: 300
       },
       1200:{
-        stagePadding: 400
+        stagePadding: 420
       }
     },
     mouseDrag: false,
