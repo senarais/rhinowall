@@ -23,6 +23,7 @@ function removeSignup() {
   document.querySelector('.login').classList.add('hidden');
 }
 const priceButton = document.querySelectorAll('.signin-button');
+const ctaButton = document.getElementById('cta1');
 const closeSignup = document.querySelectorAll('.bx-x-circle');
 const signUp = document.querySelector('.signin');
 
@@ -33,6 +34,8 @@ closeSignup.forEach(button => {
 priceButton.forEach((button) => {
   button.addEventListener('click', toggleSignup);
 });
+
+ctaButton.addEventListener('click', toggleSignup);
 
 
 
