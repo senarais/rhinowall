@@ -702,7 +702,7 @@ form button:hover {
 .cta {
     width: 100%;
     padding: 50px 0;
-    height: fit-content;
+    height: 550px;
     background-color: var(--main-color);
     display: flex;
     flex-direction: column;
@@ -774,8 +774,9 @@ form button:hover {
     font-size: 14px
 }
 
-.footer-products a {
+.footer-products a:hover {
     cursor: pointer;
+    text-decoration: underline;
 }
 
 .footer-end {

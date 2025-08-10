@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/boxicons v2.1.4/css/boxicons.min.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-color: #004868;
+            --secondary-color: #F8F9F9;
+            --third-color: #F5A623;
+            --text-color: #000;
+            --button-color: #d3d3d3;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: Inter;
+        }
+
+        .profile {
+            width: 100%;
+            padding: 70px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .profile-container {
+            width: 80%;
+            height: 80%;
+            display: flex;
+            gap: 50px;
+            flex-direction: column;
+            border: 1px solid black;
+            padding: 60px;
+            border-radius: 25px;
+        }
+
+        .profile-heading {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid black;
+        }
+
+        .profile-heading h2 {
+            font-size: 40px;
+        }
+
+        .profile-heading img {
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+
+        .profile-text {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .profile-text-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .profile-text-detail a {
+            padding: 12px;
+            background-color: var(--button-color);
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .profile-text-detail a:hover {
+            cursor: pointer;
+            filter: brightness(0.8);
+        }
+
+        .profile-text-detail input {
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+        }
+
+        .profile-text-detail h4, .profile-text-detail p {
+            font-size: 20px;
+        }
+
+        .profile-plan {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 30px;
+            background-color: var(--button-color);
+            color: var(--text-color);
+        }
+
+        .profile-plan p {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .profile-plan h2 {
+            font-size: 40px
+        }
+
+
+        .profile-plan-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+
+        .profile-plan-detail p {
+            font-weight: 400;
+        }
+
+        .profile-plan a {
+            padding: 12px;
+            background-color: var(--button-color);
+            text-align: center;
+            width: fit-content;
+            border: 1px solid black;
+            border-radius: 15px;
+            transition: 0.3s;
+            filter: brightness(1.1);
+        }
+
+        .profile-plan a:hover {
+            cursor: pointer;
+            filter: brightness(0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <div class="profile-container">
+            <div class="profile-heading">
+                <img src="assets/pp.jpeg" alt="Profile Picture">        
+                <h2>My Profile</h2>
+            </div>
+            <div class="profile-text">
+                <div class="profile-text-detail">
+
+                    <h4>Name</h4>
+                    <p>Display Name</p>
+                </div>
+                
+                <div class="profile-text-detail">
+                    <h4>Email</h4>
+                    <p>@gmail.com</p>
+                </div>
+
+                <div class="profile-text-detail">
+                    <h4>Password</h4>
+                    <a>Change Password</a>
+                </div>
+
+                <div class="profile-text-detail">
+                    <h4>Phone Number</h4>
+                    <input type="tel">
+                </div>
+            </div>
+    
+            <div class="profile-plan">
+                <p>Your Current Plan :</p>
+                <h2>Free</h2>
+                <div class="profile-plan-detail">
+                    <p><i class='bx  bx-check-circle'  ></i> Manual Scan Only</p> 
+                    <p><i class='bx  bx-check-circle'  ></i> Weekly Scheduled Scans</p> 
+                    <p><i class='bx  bx-check-circle'  ></i> Limited Cloud-Based Threat DB</p> 
+                    <p><i class='bx  bx-check-circle'  ></i> Limited Ransomware Protection</p> 
+                    <p><i class='bx  bx-check-circle'  ></i> Supports 1 Device Only</p>
+                    <p><i class='bx  bx-check-circle'  ></i> Customer Support</p>
+                </div>
+                <a>Download App</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
