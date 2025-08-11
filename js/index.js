@@ -22,10 +22,18 @@ function removeSignup() {
   document.querySelector('.signin').classList.add('hidden');
   document.querySelector('.login').classList.add('hidden');
 }
+
+function toggleCheckout() {
+  const audioOn = new Audio('/assets/audio/price-switch-on.mp3');
+  audioOn.play();
+  audioOn.volume = 0.5;
+  document.querySelector('.checkout').classList.remove('hidden');
+}
 const priceButton = document.querySelectorAll('.signin-button');
 const ctaButton = document.getElementById('cta1');
 const closeSignup = document.querySelectorAll('.bx-x-circle');
 const signUp = document.querySelector('.signin');
+const checkout = document.querySelector('.closeCheckout');
 
 closeSignup.forEach(button => {
   button.addEventListener('click', removeSignup);
@@ -36,6 +44,13 @@ priceButton.forEach((button) => {
 });
 
 ctaButton.addEventListener('click', toggleSignup);
+
+checkout.addEventListener('click', () => {
+  const audioOff = new Audio('/assets/audio/price-switch-off.mp3');
+  audioOff.play();
+  audioOff.volume = 0.5;
+  document.querySelector('.checkout').classList.add('hidden');
+});
 
 
 

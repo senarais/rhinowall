@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RhinoWall</title>
+    <link rel="icon" type="image/png" href="assets/RhinoWall-logo.png">
+    <link rel="stylesheet" href="lib/boxicons v2.1.4/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lib/swiper/swiper.css">
+    <link rel="stylesheet" href="lib/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="signin hidden">
+        <a><i class='bx  bx-x-circle'  ></i></a> 
+        <div class="signin-container">
+            <div class="signin-header">
+                <div class="signin-header-title">
+                    <div class="signin-logo">
+                        <img src="assets/RhinoWall-logo.png" alt="RhinoWall Logo">
+                    </div>
+                    <h1>Sign Up</h1>
+                </div>
+
+                <p>Start using RhinoWall for Free!</p>
+            </div>
+
+            <div class="signin-content">
+                <a href=""><div class="signin-oauth">
+                    <div class="google"><img src="assets/google.png" alt="google logo"> Sign in with Google</div>
+                </div></a>
+
+                <div class="line"></div>
+
+                <div class="signin-local">
+                    <form onsubmit="return handleSubmit()">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter your Full Name" required>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Create your Password" required>
+
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+            <p>Already have an account? <a class="changeMethod" onclick="toggleLogin()">Sign in</a></p>
+        </div>
+    </div>
+
+    <div class="login hidden">
+        <a><i class='bx  bx-x-circle'  ></i></a> 
+        <div class="signin-container">
+            <div class="signin-header">
+                <div class="signin-header-title">
+                    <div class="signin-logo">
+                        <img src="assets/RhinoWall-logo.png" alt="RhinoWall Logo">
+                    </div>
+                    <h1>Sign In</h1>
+                </div>
+
+                <p>Start using RhinoWall for Free!</p>
+            </div>
+
+            <div class="signin-content">
+                <a href=""><div class="signin-oauth">
+                    <div class="google"><img src="assets/google.png" alt="google logo"> Sign in with Google</div>
+                </div></a>
+
+                <div class="line"></div>
+
+                <div class="signin-local">
+                    <form onsubmit="window.location.href='index.html'; return false;">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Create your Password" required>
+
+                        <button type="submit">Sign In</button>
+                    </form>
+                </div>
+            </div>
+            <p>Don't have an account? <a class="changeMethod" onclick="toggleSignup()">Sign Up</a></p>
+        </div>
+    </div>
+
+    <div class="checkout ">
+        <i class='bx  bx-x-circle closeCheckout'  ></i>
+        <div class="checkout-container">
+            <div class="checkout-text">
+                <h5>Free Tier</h5>
+                <p>x1</p>
+            </div>
+            <div class="checkout-text">
+                <h6>Billing Cycle</h6>
+                <p>Monthly</p>
+            </div>
+            <div class="checkout-text">
+                <h6>Subtotal</h6>
+                <p>$0</p>
+            </div>
+            <a>Checkout</a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <img src="assets/RhinoWall AV.png" alt="RhinoWall Logo">
+        <div class="navbar-content">
+            <i class="bx bx-sun"></i>
+            <a href="#">toggle</a>
+            <a class="signin-button">sign in</a>
+            <a id="navbar-download" href="#">Download</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Responsible Antivirus that ensures your device and reputation.</h1>
+            <p id="hero-p"></p>
+            <div class="hero-anchor">
+                <a href="data:text/plain;base64,SGVsbG8gd29ybGQh" download="test.txt"><div class="windows">
+                    <img src="/assets/windows.png" alt="windows logo">
+                    <div class="windows-text">
+                        <h6 id="windows" href="#">Download</h6>
+                        <p>for Windows v2.3</p>
+                    </div>
+                </div></a>
+                <a href="data:text/plain;base64,SGVsbG8gd29ybGQh" download="test.txt"><div class="mac">
+                    <img src="/assets/mac.png" alt="mac logo">
+                    <div class="mac-text">
+                        <h6 id="windows">Download</h6>
+                        <p>for Mac v2.0</p>
+                    </div>
+                </div></a>
+            </div>
+        </div>
+        <div class="hero-img">
+            <img src="assets/hero-img.png" alt="rhinowall logo">
+        </div>
+    </div>
+
+    <div class="swiper">
+        <p>Trusted by over 2.000.000 People and Companies</p>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/company/1.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/2.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/3.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/4.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/5.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/1.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/2.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/3.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/4.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/5.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/1.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/2.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/3.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/4.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/5.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/1.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/2.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/3.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/4.png" alt="company logo"></div>
+            <div class="swiper-slide"><img src="assets/company/5.png" alt="company logo"></div>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="features-text">
+            <h2>All the Protection You Need.</h2>
+            <p>Built to block what others miss.</p>
+        </div>
+
+        <div class="features-main">
+            <div class="features-card">
+                <h6>Real-Time, Lightweight Protection</h6>
+                <p>Unlike bloated antivirus software, yours runs smoothly without slowing down the system — users get instant protection against viruses, malware, and threats as they happen.</p>
+            </div>
+            <div class="features-card">
+                <h6>All-in-One Cybersecurity Suite</h6>
+                <p>Not just antivirus. You offer anti-malware, phishing defense, VPN, firewall, and more — all bundled into one tool. No need to buy 5 different products.</p>
+            </div>
+            <div class="features-card">
+                <h6>Human-Centered Privacy Focus</h6>
+                <p>Designed with users in mind, not just machines. No sneaky data collection, no ads. You respect user privacy, give control over settings, and offer transparent protection.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="stats-text">
+            <h4>99.8%</h4>
+            <p>Threat Detection Rate</p>
+        </div>
+        <div class="stats-text">
+            <h4>2.000.000</h4>
+            <p>Users Worldwide</p>
+        </div>
+        <div class="stats-text">
+            <h4>3x</h4>
+            <p>Faster Scan Speeds</p>
+        </div>
+    </div>
+
+    <div class="price">
+        <div class="price-text">
+            <h2>One Click. Full Protection.</h2>
+            <p>Compare our plans and get peace of mind now.</p>
+        </div>
+
+        <div class="toggle-price">
+            <p>Monthly</p>
+            <div class="button"><div class="button-circle"></div></div>
+            <p>Yearly</p>
+        </div>
+
+        <div class="price-container">
+            <div class="price-card tier-free">
+                <div class="price-card-header">
+                    <h6><i class='bx  bx-lock-open-alt'  ></i> Free</h6>
+                    <p>Protects your device from common viruses and threats. Great for personal or casual users who just need essential security.</p>
+                </div>
+
+                <h4 id="price-free">$0<span>/month</span></h4>
+                <a id="free-tier"><div class="price-card-button signin-button">Sign Up</div></a>
+
+                <div class="price-card-features">
+                    <h6>Features includes:</h6>
+                    <div class="price-card-features-list">
+                        <p><i class='bx  bx-check-circle'  ></i> Manual Scan Only</p> 
+                        <p><i class='bx  bx-check-circle'  ></i> Weekly Scheduled Scans</p> 
+                        <p><i class='bx  bx-check-circle'  ></i> Limited Cloud-Based Threat DB</p> 
+                        <p><i class='bx  bx-check-circle'  ></i> Limited Ransomware Protection</p> 
+                        <p><i class='bx  bx-check-circle'  ></i> Supports 1 Device Only</p>
+                        <p><i class='bx  bx-check-circle'  ></i> Customer Support</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="price-card tier-pro">
+                <div id="most-popular-container" class="price-card-header">
+                    <p id="most-popular">Most Popular</p>
+                    <h6><i class='bx  bx-star'  ></i>  Pro</h6>
+                    <p>Real-time protection, smart detection, and extra tools to keep you safe. Perfect for active users who want more control and peace of mind.</p>
+                </div>
+
+                <h4 id="price-pro">$9<span>/month</span></h4>
+                <a><div class="price-card-button signin-button">Get Pro</div></a>
+
+                <div class="price-card-features">
+                    <h6>Features includes:</h6>
+                    <div class="price-card-features-list">
+                        <p><i class='bx  bx-check-circle'  ></i> Full Real-time Protection</p> 
+                        <p><i class='bx  bx-check-circle'  ></i> Custom Daily/Weekly Scans</p> 
+                        <p><i class='bx  bx-check-circle'  ></i> Full Access Cloud-Based Threat DB</p> 
+                        <p><i class='bx  bx-check-circle'  ></i> Full Ransomware Protection</p> 
+                        <p><i class='bx  bx-check-circle'  ></i> Supports 1 Device Only</p>
+                        <p><i class='bx  bx-check-circle'  ></i> Priority Email Support</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-card-header">
+                    <h6><i class='bx  bx-buildings'  ></i>  Business</h6>
+                    <p>Covers multiple devices, includes centralized management, and offers premium support. Best for companies that take security seriously.</p>
+                </div>
+
+                <h4 id="price-business">$29<span>/month</span></h4>
+                <a><div class="price-card-button signin-button">Get Business</div></a>
+
+                <div class="price-card-features">
+                    <h6>Features includes:</h6>
+                    <div class="price-card-features-list">
+                        <p><i class='bx  bx-check-circle'  ></i> Full Real-time Protection</p> 
+                        <p><i class='bx  bx-check-circle'  ></i> Advanced Scheduling & Automation</p> 
+                        <p><i class='bx  bx-check-circle'  ></i> Full Access Cloud-Based Threat DB</p> 
+                        <p><i class='bx  bx-check-circle'  ></i> Full Ransomware Protection</p> 
+                        <p><i class='bx  bx-check-circle'  ></i> Supports up to 15 Devices</p>
+                        <p><i class='bx  bx-check-circle'  ></i> 24/7 Dedicated Business Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="feedback">
+        <div class="feedback-header-text">
+            <h2>Hear It from the Greats.</h2>
+            <p>What they think about our product.</p>
+        </div>
+
+
+        <div class="owl-carousel owl-theme">
+            <div class="feedback-card">
+                <img src="assets/company/1.png" alt="company logo">
+                <div class="feedback-text">
+                    <p>"The best antivirus in the world right now."</p>
+                </div>
+                <div class="feedback-user">
+                    <img src="assets/people/steve-jobs.jpeg" alt="Steve Jobs">
+                    <div class="feedback-user-name">
+                        <p class="bold">Steve Jobless</p>
+                        <p>Founder of Mapple</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback-card">
+                <img src="assets/company/2.png" alt="company logo">
+                <div class="feedback-text">
+                    <p>"This antivirus has the efficiency I wish every software could achieve — it anticipates threats before they become problems."</p>
+                </div>
+                <div class="feedback-user">
+                    <img src="assets/people/bill-gates.jpeg" alt="Bill Gates">
+                    <div class="feedback-user-name">
+                        <p class="bold">Phil Gates</p>
+                        <p>Founder of MacroHard</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback-card">
+                <img src="assets/company/3.png" alt="company logo">
+                <div class="feedback-text">
+                    <p>"It's not just protection — it's innovation. Feels like having a cybersecurity rocket on my desktop."</p>
+                </div>
+                <div class="feedback-user">
+                    <img src="assets/people/elon-musk.jpeg" alt="Elon Musk">
+                    <div class="feedback-user-name">
+                        <p class="bold">Elon Masked</p>
+                        <p>CEO of Testla & Space-Y</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback-card">
+                <img src="assets/company/4.png" alt="company logo">
+                <div class="feedback-text">
+                    <p>"Scales effortlessly, delivers consistent performance, and adapts to threats instantly — that’s the future of security"</p>
+                </div>
+                <div class="feedback-user">
+                    <img src="assets/people/jefbezos.jpeg" alt="Jeff Bezos">
+                    <div class="feedback-user-name">
+                        <p class="bold">Jeff Benzos</p>
+                        <p>Founder of Amaze-On</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta">
+        <div class="cta-text">
+            <h2>Guard Your <br> Tech Today.</h2>
+            <p>Your devices are more than just tools — they hold your work, memories, and connections. Keep them safe with protection that’s fast, reliable, and always on your side.</p>
+        </div>
+        <div class="cta-button">
+            <a id="cta1">Sign Up for Free</a>
+            <a id="cta2">Download App</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img src="assets/RhinoWall AV.png" alt="RhinoWall">
+
+        <div class="footer-products">
+            <h4>Products</h4>
+            <a>RhinoWall Pro</a>
+            <a>RhinoWall Lite</a>
+            <a>RhinoWall Enterprise</a>
+        </div>
+
+        <div class="footer-products">
+            <h4>Support</h4>
+            <a>Documentation</a>
+            <a>FAQs</a>
+            <a>Contact Support</a>
+        </div>
+
+        <div class="footer-products">
+            <h4>Company</h4>
+            <a>About Us</a>
+            <a>Careers</a>
+            <a>Privacy Policy</a>
+        </div>
+    </div>
+
+    <div class="footer-end">
+        <p>Copyright &copy; 2025 RhinoWall, Inc.</p>
+    </div>
+
+
+
+    <script src="lib/jquery/jquery-3.7.1.min.js"></script>
+    <script src="lib/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

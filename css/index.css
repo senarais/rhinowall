@@ -78,7 +78,7 @@ body {
     cursor: pointer;
 }
 
-.signin, .login {
+.signin, .login, .checkout {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -217,6 +217,45 @@ form button:hover {
 
 .changeMethod, .signin-button {
     cursor: pointer;
+}
+
+.checkout-container {
+    background-color: var(--secondary-color);
+    border: 1px solid black;
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    z-index: 12;
+}
+
+.checkout-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkout-text h5 {
+    font-size: 25px;
+}
+
+.checkout-text h6 {
+    font-size: 15px;
+}
+
+.checkout a {
+    padding: 10px;
+    color: var(--secondary-color);
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--main-color);
+    transition: 0.3s;
+}
+
+.checkout a:hover {
+    filter: brightness(0.8);
 }
 
 .hidden {
