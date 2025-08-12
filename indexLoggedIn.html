@@ -95,20 +95,20 @@
         </div>
     </div>
 
-    <div class="checkout ">
+    <div class="checkout hidden">
         <i class='bx  bx-x-circle closeCheckout'  ></i>
         <div class="checkout-container">
             <div class="checkout-text">
-                <h5>Free Tier</h5>
+                <h5 id="checkout-tier-h5">Free Tier</h5>
                 <p>x1</p>
             </div>
             <div class="checkout-text">
                 <h6>Billing Cycle</h6>
-                <p>Monthly</p>
+                <p id="checkout-cycle-p">Monthly</p>
             </div>
             <div class="checkout-text">
                 <h6>Subtotal</h6>
-                <p>$0</p>
+                <p id="checkout-subtotal-p">$0</p>
             </div>
             <a>Checkout</a>
         </div>
@@ -256,7 +256,7 @@
                 </div>
 
                 <h4 id="price-pro">$9<span>/month</span></h4>
-                <a><div class="price-card-button signin-button">Get Pro</div></a>
+                <a onclick="proTier()"><div class="price-card-button signin-button checkout-button">Get Pro</div></a>
 
                 <div class="price-card-features">
                     <h6>Features includes:</h6>
@@ -278,7 +278,7 @@
                 </div>
 
                 <h4 id="price-business">$29<span>/month</span></h4>
-                <a><div class="price-card-button signin-button">Get Business</div></a>
+                <a onclick="businessTier()"><div class="price-card-button signin-button checkout-button">Get Business</div></a>
 
                 <div class="price-card-features">
                     <h6>Features includes:</h6>
@@ -404,6 +404,6 @@
     <script src="lib/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/indexLoggedIn.js"></script>
 </body>
 </html>

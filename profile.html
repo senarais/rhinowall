@@ -24,12 +24,12 @@
                 <div class="profile-text-detail">
 
                     <h4>Name</h4>
-                    <p>Display Name</p>
+                    <p id="profile-name">Display Name</p>
                 </div>
                 
                 <div class="profile-text-detail">
                     <h4>Email</h4>
-                    <p>@gmail.com</p>
+                    <p  id="profile-email">@gmail.com</p>
                 </div>
 
                 <div class="profile-text-detail">
@@ -47,12 +47,12 @@
                 <p>Your Current Plan :</p>
                 <h2>Free</h2>
                 <div class="profile-plan-detail">
-                    <p><i class='bx  bx-check-circle'  ></i> Manual Scan Only</p> 
-                    <p><i class='bx  bx-check-circle'  ></i> Weekly Scheduled Scans</p> 
-                    <p><i class='bx  bx-check-circle'  ></i> Limited Cloud-Based Threat DB</p> 
-                    <p><i class='bx  bx-check-circle'  ></i> Limited Ransomware Protection</p> 
-                    <p><i class='bx  bx-check-circle'  ></i> Supports 1 Device Only</p>
-                    <p><i class='bx  bx-check-circle'  ></i> Customer Support</p>
+                    <p class="profile-plan-text"><i class='bx  bx-check-circle'  ></i> Manual Scan Only</p> 
+                    <p class="profile-plan-text"><i class='bx  bx-check-circle'  ></i> Weekly Scheduled Scans</p> 
+                    <p class="profile-plan-text"><i class='bx  bx-check-circle'  ></i> Limited Cloud-Based Threat DB</p> 
+                    <p class="profile-plan-text"><i class='bx  bx-check-circle'  ></i> Limited Ransomware Protection</p> 
+                    <p class="profile-plan-text"><i class='bx  bx-check-circle'  ></i> Supports 1 Device Only</p>
+                    <p class="profile-plan-text"><i class='bx  bx-check-circle'  ></i> Customer Support</p>
                 </div>
                 <a>Download App</a>
             </div>
@@ -60,5 +60,37 @@
     </div>
 
     <script src="js/index.js"></script>
+    <script src="js/indexLoggedIn.js"></script>
+    <script>
+        window.onload = function() {
+            const profileName = document.getElementById('profile-name');
+            const profileEmail = document.getElementById('profile-email');
+
+            const savedName = sessionStorage.getItem('savedFullName');
+            const savedEmail = sessionStorage.getItem('savedEmail');
+            const savedCurrentItem = sessionStorage.getItem('savedCurrentItem');
+
+            if (savedCurrentItem == 1) {
+                var proText = ['Full Real-time Protection', 'Custom Daily/Weekly Scans', 'Full Access Cloud-Based Threat DB',
+                    'Full Ransomware Protection', 'Supports 1 Device Only', 'Priority Email Support'
+                ];
+
+                const planHeader = document.querySelector('.profile-plan h2');
+                const planText = document.querySelectorAll('.profile-plan-text');
+                
+                planHeader.textContent = "Pro"
+                for (var i = 0; i < proText.length; i++ ) {
+                    planText[i].innerHTML = `<i class='bx  bx-check-circle'  ></i> ${proText[i]}`;
+                }
+
+                document.querySelector('.profile-plan').style.backgroundColor = '#F5A623';
+            }
+
+            if (savedName && savedEmail) {
+                profileName.textContent = savedName;
+                profileEmail.textContent = savedEmail;
+            } 
+        };
+    </script>
 </body>
 </html>

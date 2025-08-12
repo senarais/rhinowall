@@ -1,49 +1,3 @@
-// Toggle SignUp
-function toggleSignup() {
-  const audioOn = new Audio('/assets/audio/price-switch-on.mp3');
-  audioOn.play();
-  audioOn.volume = 0.5;
-  document.querySelector('.login').classList.add('hidden');
-  document.querySelector('.signin').classList.remove('hidden');
-}
-
-function toggleLogin() {
-  const audioOn = new Audio('/assets/audio/price-switch-on.mp3');
-  audioOn.play();
-  audioOn.volume = 0.5;
-  document.querySelector('.signin').classList.add('hidden');
-  document.querySelector('.login').classList.remove('hidden');
-}
-
-function removeSignup() {
-  const audioOff = new Audio('/assets/audio/price-switch-off.mp3');
-  audioOff.play();
-  audioOff.volume = 0.5;
-  document.querySelector('.signin').classList.add('hidden');
-  document.querySelector('.login').classList.add('hidden');
-}
-
-
-const priceButton = document.querySelectorAll('.signin-button');
-const ctaButton = document.getElementById('cta1');
-const closeSignup = document.querySelectorAll('.bx-x-circle');
-const signUp = document.querySelector('.signin');
-
-
-closeSignup.forEach(button => {
-  button.addEventListener('click', removeSignup);
-});
-
-priceButton.forEach((button) => {
-  button.addEventListener('click', toggleSignup);
-});
-
-ctaButton.addEventListener('click', toggleSignup);
-
-
-
-
-
 // Validate Register Password
 function handleSubmit() {
   const pw = document.getElementById("password").value;
@@ -54,20 +8,9 @@ function handleSubmit() {
     return false; 
   }
 
-  saveData();
-
-  window.location.href = "profile.html";
+  window.location.href = "index.html";
 
   return false;
-}
-
-// Save User Data
-function saveData() {
-  const userEmail = document.getElementById('email').value;
-  const userFullName = document.getElementById('fullname').value;
-
-  sessionStorage.setItem('savedEmail', userEmail);
-  sessionStorage.setItem('savedFullName', userFullName);
 }
 
 
@@ -77,6 +20,90 @@ var typed = new Typed('#hero-p', {
       typeSpeed: 0,
       showCursor: false,
     });
+
+//Checkout
+function toggleCheckout() {
+  const audioOn = new Audio('/assets/audio/price-switch-on.mp3');
+  audioOn.play();
+  audioOn.volume = 0.5;
+  document.querySelector('.checkout').classList.remove('hidden');
+}
+function removeCheckout() {
+  const audioOn = new Audio('/assets/audio/price-switch-off.mp3');
+  audioOn.play();
+  audioOn.volume = 0.5;
+  currentPlan = 0;
+  document.querySelector('.checkout').classList.add('hidden');
+}
+const closeCheckout = document.querySelector('.checkout i');
+closeCheckout.addEventListener('click', removeCheckout);
+
+//Checkout Data
+var currentPlan = 0;
+// free = 0
+// pro = 1
+// business = 2
+
+if (currentPlan == 1) {
+    var proText = ['Full Real-time Protection', 'Custom Daily/Weekly Scans', 'Full Access Cloud-Based Threat DB',
+        'Full Ransomware Protection', 'Supports 1 Device Only', 'Priority Email Support'
+    ];
+
+    const planHeader = document.querySelector('.profile-plan h2');
+    const planText = document.querySelectorAll('.profile-plan-text');
+    
+    planHeader.textContent = "Pro"
+    for (var i = 0; i < proText.length; i++ ) {
+        planText[i].textContent = proText[i];
+    }
+}
+
+
+function proTier() {
+    const checkoutTier = document.getElementById('checkout-tier-h5');
+    const checkoutCycle = document.getElementById('checkout-cycle-p');
+    const checkoutSubtotal = document.getElementById('checkout-subtotal-p');
+    const checkout = document.querySelector('.checkout');
+
+    checkoutTier.innerHTML = 'Pro Tier';
+    if (toggleYear == 0) {
+        checkoutCycle.innerHTML = 'Monthly';
+        checkoutSubtotal.innerHTML = '$9';
+    } else if (toggleYear == 1) {
+        checkoutCycle.innerHTML = 'Yearly';
+        checkoutSubtotal.innerHTML = '$99';
+    }
+
+    sessionStorage.setItem('savedCurrentItem', 1);
+    checkout.classList.remove('hidden');
+
+    const audioOn = new Audio('/assets/audio/price-switch-on.mp3');
+    audioOn.volume = 0.5;
+    audioOn.play();
+}
+
+function businessTier() {
+    const checkoutTier = document.getElementById('checkout-tier-h5');
+    const checkoutCycle = document.getElementById('checkout-cycle-p');
+    const checkoutSubtotal = document.getElementById('checkout-subtotal-p');
+    const checkout = document.querySelector('.checkout');
+
+    checkoutTier.innerHTML = 'Business Tier';
+    if (toggleYear == 0) {
+        checkoutCycle.innerHTML = 'Monthly';
+        checkoutSubtotal.innerHTML = '$29';
+    } else if (toggleYear == 1) {
+        checkoutCycle.innerHTML = 'Yearly';
+        checkoutSubtotal.innerHTML = '$299';
+    }
+
+    currentPlan = 2;
+    checkout.classList.remove('hidden');
+
+    const audioOn = new Audio('/assets/audio/price-switch-on.mp3');
+    audioOn.volume = 0.5;
+    audioOn.play();
+}
 
 
 // NAVBAR SCROLL EFFECT
