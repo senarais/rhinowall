@@ -5,6 +5,7 @@ function toggleSignup() {
   const audioOn = new Audio('/assets/audio/price-switch-on.mp3');
   audioOn.play();
   audioOn.volume = 0.5;
+  loginValue = 0;
   document.querySelector('.login').classList.add('hidden');
   document.querySelector('.signin').classList.remove('hidden');
 }
@@ -13,6 +14,7 @@ function toggleLogin() {
   const audioOn = new Audio('/assets/audio/price-switch-on.mp3');
   audioOn.play();
   audioOn.volume = 0.5;
+  loginValue = 1;
   document.querySelector('.signin').classList.add('hidden');
   document.querySelector('.login').classList.remove('hidden');
 }
@@ -64,12 +66,17 @@ function handleSubmit() {
 }
 
 // Save User Data
+var loginValue = 0;
 function saveData() {
-  const userEmail = document.getElementById('email').value;
-  const userFullName = document.getElementById('fullname').value;
-
-  sessionStorage.setItem('savedEmail', userEmail);
-  sessionStorage.setItem('savedFullName', userFullName);
+  if (loginValue == 0) {
+    const userEmail = document.getElementById('email').value;
+    const userFullName = document.getElementById('fullname').value;
+    sessionStorage.setItem('savedEmail', userEmail);
+    sessionStorage.setItem('savedFullName', userFullName);
+  } else if (loginValue == 1) {
+    const userEmail = document.getElementById('email1').value;
+    sessionStorage.setItem('savedEmail', userEmail);
+  }
 }
 
 

@@ -81,9 +81,9 @@
                 <div class="line"></div>
 
                 <div class="signin-local">
-                    <form onsubmit="window.location.href='index.html'; return false;">
+                    <form onsubmit=" return handleSubmit()">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+                        <input type="email" id="email1" name="email" placeholder="Enter your Email" required>
 
                         <label for="password">Password:</label>
                         <input type="password" id="password" name="password" placeholder="Create your Password" required>
@@ -97,12 +97,10 @@
     </div>
 
     <div class="navbar">
-        <img src="assets/RhinoWall AV.png" alt="RhinoWall Logo">
+        <a href="index.html"><img src="assets/RhinoWall AV.png" alt="RhinoWall Logo"></a>
         <div class="navbar-content">
-            <i class="bx bx-sun"></i>
-            <a href="#">toggle</a>
-            <a class="signin-button">sign in</a>
-            <a id="navbar-download" href="#">Download</a>
+            <a class="signin-button navbar-a">sign in</a>
+            <a class="navbar-a" id="navbar-download" href="data:text/plain;base64,SGVsbG8gd29ybGQh" download="test.txt">Download</a>
         </div>
     </div>
 

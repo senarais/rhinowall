@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="lib/animate on scroll/aos.css">
     <link rel="stylesheet" href="lib/boxicons v2.1.4/css/boxicons.min.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +15,18 @@
     </style>
 </head>
 <body>
-    <div class="profile">
+    <div class="navbar">
+        <a href="indexLoggedIn.html"><img src="assets/RhinoWall AV.png" alt="RhinoWall Logo"></a>
+        <div class="navbar-content">
+            <a class="navbar-a" id="navbar-download" href="data:text/plain;base64,SGVsbG8gd29ybGQh" download="test.txt">Download</a>
+            <a href="profile.html"><div class="navbar-profile">
+                <img src="assets/pp.jpeg" alt="Profile Picture">
+                <p>My Profile</p>
+            </div> </a>
+        </div>
+    </div>
+
+    <div class="profile" data-aos="fade-down">
         <div class="profile-container">
             <div class="profile-heading">
                 <img src="assets/pp.jpeg" alt="Profile Picture">        
@@ -24,7 +36,7 @@
                 <div class="profile-text-detail">
 
                     <h4>Name</h4>
-                    <p id="profile-name">Display Name</p>
+                    <p id="profile-name">Username</p>
                 </div>
                 
                 <div class="profile-text-detail">
@@ -85,9 +97,11 @@
         <p>Copyright &copy; 2025 RhinoWall, Inc.</p>
     </div>
 
+    <script src="lib/animate on scroll/aos.js"></script>
     <script src="js/index.js"></script>
     <script src="js/indexLoggedIn.js"></script>
     <script>
+        AOS.init();
         window.onload = function() {
             const profileName = document.getElementById('profile-name');
             const profileEmail = document.getElementById('profile-email');

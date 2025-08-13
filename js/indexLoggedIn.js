@@ -18,7 +18,7 @@ function handleSubmit() {
 
 //Typed Effect
 var typed = new Typed('#hero-p', {
-      strings: ['Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit dolorem quisquam ad, corporis laboriosam voluptate earum delectus rem iure incidunt, sunt tenetur laborum exercitationem qui.'],
+      strings: ['Protect your devices from viruses, malware, and online threats with reliable security that keeps your privacy intact.'],
       typeSpeed: 0,
       showCursor: false,
     });
@@ -43,6 +43,7 @@ document.querySelector('.checkout-container a').addEventListener('click', () => 
   audioOn.play();
   audioOn.volume = 0.5;
   document.querySelector('.checkout').classList.add('hidden');
+  window.location.href = "profile.html";
 });
 
 const closeCheckout = document.querySelector('.checkout i');
