@@ -59,6 +59,32 @@
         </div>
     </div>
 
+    <div class="footer">
+        <img src="assets/RhinoWall AV.png" alt="RhinoWall">
+
+        <div class="footer-products">
+            <h4>Products</h4>
+            <a>RhinoWall Pro</a>
+            <a>RhinoWall Lite</a>
+            <a>RhinoWall Enterprise</a>
+        </div>
+
+        <div class="footer-products">
+            <h4>Support</h4>
+            <a>Documentation</a>
+            <a>FAQs</a>
+            <a>Contact Support</a>
+        </div>
+
+        <div class="footer-products">
+            <h4>Company</h4>
+            <a>About Us</a>
+            <a>Careers</a>
+            <a>Privacy Policy</a>
+        </div>
+        <p>Copyright &copy; 2025 RhinoWall, Inc.</p>
+    </div>
+
     <script src="js/index.js"></script>
     <script src="js/indexLoggedIn.js"></script>
     <script>
@@ -81,9 +107,27 @@
                 planHeader.textContent = "Pro"
                 for (var i = 0; i < proText.length; i++ ) {
                     planText[i].innerHTML = `<i class='bx  bx-check-circle'  ></i> ${proText[i]}`;
+                    document.querySelector('.profile-plan').style.color = 'white';
+                    document.querySelector('.profile-plan a').style.color = 'black';
                 }
 
-                document.querySelector('.profile-plan').style.backgroundColor = '#F5A623';
+                document.querySelector('.profile-plan').style.backgroundColor = '#004868';
+            } else if (savedCurrentItem == 2) {
+                var proText = ['Full Real-time Protection', 'Advanced Scheduling & Automation', 'Full Access Cloud-Based Threat DB',
+                    'Full Ransomware Protection', 'Supports up to 15 Devices', '24/7 Dedicated Business Support'
+                ];
+
+                const planHeader = document.querySelector('.profile-plan h2');
+                const planText = document.querySelectorAll('.profile-plan-text');
+                
+                planHeader.textContent = "Business"
+                for (var i = 0; i < proText.length; i++ ) {
+                    planText[i].innerHTML = `<i class='bx  bx-check-circle'  ></i> ${proText[i]}`;
+                    document.querySelector('.profile-plan').style.color = 'white';
+                    document.querySelector('.profile-plan a').style.color = 'black';
+                }
+
+                document.querySelector('.profile-plan').style.backgroundColor = '#004868';
             }
 
             if (savedName && savedEmail) {

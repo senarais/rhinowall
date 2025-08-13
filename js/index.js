@@ -1,3 +1,5 @@
+AOS.init();
+
 // Toggle SignUp
 function toggleSignup() {
   const audioOn = new Audio('/assets/audio/price-switch-on.mp3');
@@ -56,7 +58,7 @@ function handleSubmit() {
 
   saveData();
 
-  window.location.href = "profile.html";
+  window.location.href = "indexLoggedIn.html";
 
   return false;
 }
@@ -73,7 +75,7 @@ function saveData() {
 
 //Typed Effect
 var typed = new Typed('#hero-p', {
-      strings: ['Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit dolorem quisquam ad, corporis laboriosam voluptate earum delectus rem iure incidunt, sunt tenetur laborum exercitationem qui.'],
+      strings: ['Protect your devices from viruses, malware, and online threats with reliable security that keeps your privacy intact.'],
       typeSpeed: 0,
       showCursor: false,
     });

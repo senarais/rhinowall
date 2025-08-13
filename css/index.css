@@ -794,7 +794,7 @@ form button:hover {
 .footer {
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 70px;
     padding: 30px;
 }
 
@@ -818,16 +818,14 @@ form button:hover {
     text-decoration: underline;
 }
 
-.footer-end {
+.footer p {
     width: 100%;
     height: 70px;
-    background-color: var(--secondary-color);
     padding: 20px;
     display: flex;
     align-items: center;
     font-size: 12px;
 }
-
 
 
 

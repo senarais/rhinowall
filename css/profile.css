@@ -17,7 +17,7 @@
 
 .profile {
     width: 100%;
-    padding: 70px 0;
+    padding: 240px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,4 +136,40 @@
 .profile-plan a:hover {
     cursor: pointer;
     filter: brightness(0.8);
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 70px;
+    padding: 30px;
+}
+
+.footer img {
+    width: 200px;
+}
+
+.footer-products {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-products h4, .footer-products a {
+    margin-bottom: 15px;
+    font-size: 14px
+}
+
+.footer-products a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer p {
+    width: 100%;
+    height: 70px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
 }

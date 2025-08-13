@@ -1,3 +1,5 @@
+AOS.init();
+
 // Validate Register Password
 function handleSubmit() {
   const pw = document.getElementById("password").value;
@@ -32,33 +34,21 @@ function removeCheckout() {
   const audioOn = new Audio('/assets/audio/price-switch-off.mp3');
   audioOn.play();
   audioOn.volume = 0.5;
-  currentPlan = 0;
+  sessionStorage.setItem('savedCurrentItem', 0);
   document.querySelector('.checkout').classList.add('hidden');
 }
+
+document.querySelector('.checkout-container a').addEventListener('click', () => {
+  const audioOn = new Audio('/assets/audio/price-switch-off.mp3');
+  audioOn.play();
+  audioOn.volume = 0.5;
+  document.querySelector('.checkout').classList.add('hidden');
+});
+
 const closeCheckout = document.querySelector('.checkout i');
 closeCheckout.addEventListener('click', removeCheckout);
 
 //Checkout Data
-var currentPlan = 0;
-// free = 0
-// pro = 1
-// business = 2
-
-if (currentPlan == 1) {
-    var proText = ['Full Real-time Protection', 'Custom Daily/Weekly Scans', 'Full Access Cloud-Based Threat DB',
-        'Full Ransomware Protection', 'Supports 1 Device Only', 'Priority Email Support'
-    ];
-
-    const planHeader = document.querySelector('.profile-plan h2');
-    const planText = document.querySelectorAll('.profile-plan-text');
-    
-    planHeader.textContent = "Pro"
-    for (var i = 0; i < proText.length; i++ ) {
-        planText[i].textContent = proText[i];
-    }
-}
-
-
 function proTier() {
     const checkoutTier = document.getElementById('checkout-tier-h5');
     const checkoutCycle = document.getElementById('checkout-cycle-p');
@@ -97,7 +87,7 @@ function businessTier() {
         checkoutSubtotal.innerHTML = '$299';
     }
 
-    currentPlan = 2;
+    sessionStorage.setItem('savedCurrentItem', 2);
     checkout.classList.remove('hidden');
 
     const audioOn = new Audio('/assets/audio/price-switch-on.mp3');
