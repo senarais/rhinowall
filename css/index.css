@@ -844,6 +844,645 @@ form button:hover {
     font-size: 12px;
 }
 
+/* RESPONSIVE STYLES */
 
+/* Tablet Large - 1024px */
+@media (max-width: 1024px) {
+    .hero {
+        gap: 60px;
+        padding: 0 20px;
+    }
+    
+    .hero-text {
+        max-width: 500px;
+    }
+    
+    .hero-text h1 {
+        font-size: 42px;
+    }
+    
+    .hero-img img {
+        width: 400px;
+    }
+    
+    .swiper {
+        width: 90%;
+        gap: 80px;
+    }
+    
+    .swiper-wrapper {
+        gap: 40px;
+    }
+    
+    .swiper-wrapper img {
+        width: 120px;
+    }
+    
+    .features-main {
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .features-card {
+        width: 280px;
+        height: 180px;
+        padding: 18px;
+    }
+    
+    .features-card h6 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .features-card p {
+        font-size: 13px;
+    }
+    
+    .price-container {
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .price-card {
+        width: 300px;
+        height: 520px;
+        padding: 25px;
+    }
+    
+    .price-card-header h6 {
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+    
+    .price-card h4 {
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+    
+    .stats {
+        gap: 80px;
+        padding: 0 20px;
+    }
+    
+    .footer {
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .footer img {
+        width: 170px;
+    }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 15px;
+    }
+    
+    .navbar img {
+        height: 80px;
+        margin-left: 10px;
+    }
+    
+    .navbar-content {
+        gap: 20px;
+        margin-right: 15px;
+    }
+    
+    .navbar-content i {
+        font-size: 36px;
+    }
+    
+    .navbar-content .navbar-a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    .hero {
+        gap: 40px;
+        height: 600px;
+    }
+    
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    
+    .hero-text p {
+        font-size: 16px;
+    }
+    
+    .hero-anchor {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .windows, .mac {
+        padding: 12px 10px;
+        gap: 15px;
+    }
+    
+    .windows img, .mac img {
+        height: 32px;
+    }
+    
+    .windows h6, .mac h6 {
+        font-size: 18px;
+    }
+    
+    .hero-img img {
+        width: 320px;
+    }
+    
+    .features-text h2 {
+        font-size: 36px;
+    }
+    
+    .swiper {
+        width: 85%;
+        gap: 60px;
+    }
+    
+    .swiper-wrapper {
+        gap: 30px;
+    }
+    
+    .swiper-wrapper img {
+        width: 100px;
+    }
+    
+    .features-main {
+        gap: 20px;
+    }
+    
+    .features-card {
+        width: 250px;
+        height: 170px;
+        padding: 16px;
+    }
+    
+    .features-card h6 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .features-card p {
+        font-size: 12px;
+    }
+    
+    .stats {
+        gap: 40px;
+        height: 160px;
+    }
+    
+    .stats-text h4 {
+        font-size: 32px;
+    }
+    
+    .stats-text p {
+        font-size: 13px;
+    }
+    
+    .price-text h2 {
+        font-size: 32px;
+    }
+    
+    .price-card {
+        width: 280px;
+        height: 500px;
+        padding: 22px;
+    }
+    
+    .price-card-header h6 {
+        font-size: 24px;
+    }
+    
+    .price-card h4 {
+        font-size: 36px;
+    }
+    
+    .price-card-header p {
+        font-size: 12px;
+    }
+    
+    .price-card-features-list p {
+        font-size: 12px;
+    }
+    
+    .cta-text h2 {
+        font-size: 48px;
+    }
+    
+    .cta-text p {
+        max-width: 500px;
+        font-size: 14px;
+    }
+    
+    .footer {
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .footer img {
+        width: 150px;
+    }
+    
+    .signin-container, .checkout-container {
+        width: 350px;
+        margin: 0 15px;
+    }
+}
+
+/* Mobile Large - 640px */
+@media (max-width: 640px) {
+    .hero {
+        flex-direction: column;
+        gap: 30px;
+        height: auto;
+        padding: 100px 20px 50px;
+        text-align: center;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+    }
+    
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    
+    .hero-anchor {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-img {
+        display: none;
+    }
+    
+    .windows, .mac {
+        padding: 10px 8px;
+        gap: 12px;
+    }
+    
+    .windows img, .mac img {
+        height: 28px;
+    }
+    
+    .windows h6, .mac h6 {
+        font-size: 16px;
+    }
+    
+    .swiper {
+        width: 95%;
+        gap: 50px;
+    }
+    
+    .swiper-wrapper {
+        gap: 25px;
+    }
+    
+    .swiper-wrapper img {
+        width: 80px;
+    }
+    
+    .features-text h2 {
+        font-size: 30px;
+    }
+    
+    .features-main {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .features-card {
+        width: 90%;
+        max-width: 320px;
+        height: 160px;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 30px;
+        height: auto;
+        padding: 40px 20px;
+    }
+    
+    .stats-text h4 {
+        font-size: 28px;
+    }
+    
+    .price-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .price-card {
+        width: 90%;
+        max-width: 320px;
+        height: 480px;
+        padding: 20px;
+    }
+    
+    .price-card-header h6 {
+        font-size: 22px;
+    }
+    
+    .price-card h4 {
+        font-size: 32px;
+    }
+    
+    .cta-text h2 {
+        font-size: 40px;
+    }
+    
+    .cta-button {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto) 70px;
+        text-align: center;
+    }
+    
+    .footer img {
+        width: 130px;
+    }
+}
+
+/* Mobile Medium - 480px */
+@media (max-width: 480px) {
+    .navbar img {
+        height: 70px;
+    }
+    
+    .navbar-content {
+        gap: 15px;
+    }
+    
+    .navbar-content i {
+        font-size: 32px;
+    }
+    
+    .navbar-content .navbar-a {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+    
+    .hero-text h1 {
+        font-size: 28px;
+    }
+    
+    .hero-text p {
+        font-size: 15px;
+    }
+    
+    .hero-anchor {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .windows, .mac {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+        padding: 8px 6px;
+    }
+    
+    .windows img, .mac img {
+        height: 24px;
+    }
+    
+    .windows h6, .mac h6 {
+        font-size: 14px;
+    }
+    
+    .swiper-wrapper img {
+        width: 70px;
+    }
+    
+    .features-text h2 {
+        font-size: 26px;
+    }
+    
+    .features-card {
+        padding: 15px;
+        height: 150px;
+    }
+    
+    .features-card h6 {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .features-card p {
+        font-size: 11px;
+    }
+    
+    .stats-text h4 {
+        font-size: 24px;
+    }
+    
+    .stats-text p {
+        font-size: 12px;
+    }
+    
+    .price-text h2 {
+        font-size: 26px;
+    }
+    
+    .price-card {
+        height: 460px;
+        padding: 18px;
+    }
+    
+    .price-card-header h6 {
+        font-size: 20px;
+    }
+    
+    .price-card h4 {
+        font-size: 30px;
+    }
+    
+    .price-card-header p {
+        font-size: 11px;
+    }
+    
+    .price-card-features-list p {
+        font-size: 11px;
+    }
+    
+    .cta-text h2 {
+        font-size: 32px;
+    }
+    
+    .cta-text p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    
+    #cta1, #cta2 {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .signin-container, .checkout-container {
+        width: 320px;
+        padding: 25px;
+    }
+    
+    .footer img {
+        width: 120px;
+    }
+}
+
+/* Mobile Small - 360px */
+@media (max-width: 360px) {
+    .navbar img {
+        height: 60px;
+    }
+    
+    .navbar-content {
+        gap: 10px;
+        margin-right: 10px;
+    }
+    
+    .navbar-content i {
+        font-size: 28px;
+    }
+    
+    .hero {
+        padding: 100px 15px 40px;
+    }
+    
+    .hero-text h1 {
+        font-size: 24px;
+    }
+    
+    .hero-text p {
+        font-size: 14px;
+    }
+    
+    .hero-img {
+        display: none;
+    }
+    
+    .windows, .mac {
+        padding: 6px 4px;
+    }
+    
+    .windows img, .mac img {
+        height: 20px;
+    }
+    
+    .windows h6, .mac h6 {
+        font-size: 12px;
+    }
+    
+    .swiper-wrapper img {
+        width: 60px;
+    }
+    
+    .features-text h2 {
+        font-size: 22px;
+    }
+    
+    .features-text p {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+    
+    .features-card {
+        width: 95%;
+        height: 140px;
+        padding: 12px;
+    }
+    
+    .features-card h6 {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    
+    .features-card p {
+        font-size: 10px;
+    }
+    
+    .stats-text {
+        padding: 15px;
+    }
+    
+    .stats-text h4 {
+        font-size: 20px;
+    }
+    
+    .stats-text p {
+        font-size: 11px;
+    }
+    
+    .price-text h2 {
+        font-size: 22px;
+    }
+    
+    .price-text p {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+    
+    .price-card {
+        width: 95%;
+        height: 440px;
+        padding: 16px;
+    }
+    
+    .price-card-header h6 {
+        font-size: 18px;
+    }
+    
+    .price-card h4 {
+        font-size: 26px;
+    }
+    
+    .price-card-header p {
+        font-size: 10px;
+    }
+    
+    .price-card-features-list p {
+        font-size: 10px;
+    }
+    
+    .cta {
+        padding: 40px 15px;
+        height: 480px;
+    }
+    
+    .cta-text h2 {
+        font-size: 26px;
+    }
+    
+    .cta-text p {
+        font-size: 12px;
+        line-height: 18px;
+        padding: 0 10px;
+    }
+    
+    .signin-container, .checkout-container {
+        width: 95%;
+        max-width: 300px;
+        padding: 20px;
+    }
+    
+    .footer {
+        padding: 20px 15px;
+    }
+    
+    .footer img {
+        width: 100px;
+    }
+}
 
 
